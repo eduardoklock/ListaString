@@ -13,7 +13,6 @@ class Lista{
         T retirarDoFim();
         T retirarDoInicio();
         T retirarDaPosicao(int);
-        T retirarEspecifico(const T&);
         bool cheia();
         bool vazia();
         int posicao(const T&);
@@ -67,7 +66,7 @@ void Lista<T>::adicionarNaPosicao(const T& adicionado,int posicao){
         throw std::out_of_range(" ");
     }
     if(posicao>this->tamanho())
-        throw std::out_of_range("Erro: fila cheia.");
+        throw std::out_of_range(" ");
     this->deslocarParaDireita(posicao);
     elementos[posicao] = adicionado;
     topo++;
